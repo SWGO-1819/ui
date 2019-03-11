@@ -1,0 +1,32 @@
+@charset "UTF-8";
+*{list-style:none;padding:0;margin:0;color:black;text-decoration:none;}
+#wrap{width:1210px;height:1000px;margin:0 auto;}
+#header{height:100px;}
+#content{height:900px;}
+
+#logo{width:100px;height:50px;float:left;}
+#logo>img{width:100px;height:50px;}
+
+#login{width:100px;height:50px;float:right;line-height:50px;}
+
+#menu{width:100%;height:50px;}
+#menu>ul{width:200px;height:50px;}
+#menu>ul>li{width:100px;height:50px;}
+#menu>ul>li>ul{width:100px;height:0px;overflow:;}
+
+#sub{width:200px;height:600px;float:left;}
+#sub>ul{width:200px;height:200px;border:1px solid black;float:left;}
+#sub>ul>li{width:200px;height:50px;text-align:center;line-height:50px;border-bottom:1px solid black;}
+#sub>ul>li:last-child{border-bottom:0;}
+
+#selectWrap{width:560px;height:60px;float: left;margin-left:10px;margin-left:5px;}
+#select{width:1000px;height:60px;float:right;}
+#select input{width:500px;height:50px;}
+#select button{width:50px;height:50px;}
+
+#selectedBook{width:1000px;height:600px;float:right;}
+#selectedBook>ul{width:1000px;height:600px;float:left;}
+#selectedBook>ul>li{width:1000px;height:269px;float:left;text-align:center;line-height:50px;float:left;}
+#selectedBook>ul>li>ul{width:188px;height:269px;float:left;border:1px solid black;margin-left:5px;}
+#selectedBook>ul>li>ul>li>img{width:100px;height:100px;}
+#selectedBook button {width:56px;height:24px;}
