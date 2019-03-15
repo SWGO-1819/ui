@@ -1,0 +1,9 @@
+@charset "UTF-8";
+*{list-style:none;padding:0;margin:0;color:black;text-decoration:none;}
+#selectedBook{width:1000px;height:600px;float:left;}
+#selectedBook>ul{width:1000px;height:300px;float:left;}
+#selectedBook>ul>li{width:1000px;height:270px;float:left;text-align:center;line-height:50px;float:left;}
+#selectedBook>ul>li>ul{width:188px;height:270px;float:left;border:1px solid black;margin-left:5px;}
+#selectedBook>ul>li>ul>li>img{width:100px;height:100px;}
+#selectedBook button {width:56px;height:24px;line-height:24px;}
+#selectedBook>form{width:1000px;height:24px;position:relative;float:left;text-align:center;}
