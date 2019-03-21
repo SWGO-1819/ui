@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%
+    	String a="";
+    %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,7 +11,7 @@
 </head>
 <body>
 <h2>매출전표등록</h2>
-<form action="section.java" method="post">
+<form action="" method="post" name="frm" onsubmit="checkFormData()">
 	<table>
 	<colgroup>
 		<col width="150px"/>
@@ -29,7 +32,7 @@
 	<tr>
 		<th>피자코드</th>
 		<td>
-		<select>
+		<select title="피자선택" name="pizza">
 			<option>[AA01]고르곤 졸라피자</option>
 			<option>[AA02]치즈피자</option>
 			<option>[AA03]페퍼로니피자</option>
@@ -45,7 +48,7 @@
 		<th>지점코드</th>
 		<td><input name="salrate" type="text"  size='12' /></td>
 	</tr>
-	<tr><td colspan="2"><button type="submit">전표등록</button><button>다시쓰기</button></td></tr>
+	<tr><td colspan="2"><button id="sectionbtn" type="submit">전표등록</button><button>다시쓰기</button></td></tr>
 	</table>
 </form>
 </body>

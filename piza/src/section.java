@@ -1,16 +1,18 @@
 
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 /**
  * Servlet implementation class index
  */
-@WebServlet("/index")
+@WebServlet("/section")
 public class section extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -26,6 +28,7 @@ public class section extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		doPost(request, response);
 	}
 
 	/**
@@ -33,10 +36,19 @@ public class section extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String salnum=request.getParamiter("salnum");
-		if(salnum==null){
-			out.println("<script>alert('¸ÅÃâÀüÇ¥¹øÈ£°¡ ÀÔ·ÂµÇÁö¾Ê¾Ò½À´Ï´Ù!');</script>");
+		request.setCharacterEncoding("UTF-8");
+		response.setCharacterEncoding("UTF-8");
+		String salnum=null;
+		salnum=request.getParameter("salnum");
+		PrintWriter out = response.getWriter();
+		if(salnum==""){
+			out.println("<html>");
+			out.println("<body>");
+			out.println("<script>alert('ë§¤ì¶œì „í‘œë²ˆí˜¸ê°€ ì…ë ¥ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.');</script>");
+			out.println("</body>");
+			out.println("</html>");
 		}
+		RequestDispatcher rd = this.getServletContext().getRequestDispatcher("/index.jsp");
+		rd.include(request, response);
 	}
-
 }

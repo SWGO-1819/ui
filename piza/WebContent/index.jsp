@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="index.css"/>
+<script src="index.js"></script>
 </head>
 <body>
 <div id="wrap">

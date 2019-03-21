@@ -16,13 +16,13 @@
 		<ul>
 			<li><a href="index.jsp">매출전표등록</a></li>
 			<li><a href="SalSelect.jsp">통합매출조회</a></li>
-			<li><a href="#">지점별매출현황</a></li>
-			<li><a href="#">상품별매출현황</a></li>
+			<li><a href="marketSalSelect.jsp">지점별매출현황</a></li>
+			<li><a href="productSalSelect.jsp">상품별매출현황</a></li>
 			<li><a href="#">홈으로</a></li>
 		</ul>
 	</div>
 	<div id="section">
-	<h2>매출전표등록</h2>
+	<h2>지점별매출현황</h2>
 		<table>
 			<colgroup>
 				<col width="100px"/>
