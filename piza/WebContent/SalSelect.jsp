@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
+<%@ page import="piza.dbconnection" %>
+<%
+	ResultSet rs = null;
+	String sql = "select * from piza_tbl";
+	rs=dbconnection.query(sql);
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -18,7 +25,7 @@
 			<li><a href="SalSelect.jsp">통합매출조회</a></li>
 			<li><a href="marketSalSelect.jsp">지점별매출현황</a></li>
 			<li><a href="productSalSelect.jsp">상품별매출현황</a></li>
-			<li><a href="#">홈으로</a></li>
+			<li><a href="index.jsp">홈으로</a></li>
 		</ul>
 	</div>
 	<div id="section">
@@ -42,6 +49,21 @@
 				<th>판매수량</th>
 				<th>매출액</th>
 			</tr>
+			<%
+				while(rs.next()){
+			%>
+			<tr>
+				<th><%=rs.getString(1)%></th>
+				<th><%=rs.getString(2)%></th>
+				<th><%=rs.getString(3)%></th>
+				<th><%=rs.getString(4)%></th>
+				<th><%=rs.getString(5)%></th>
+				<th><%=rs.getString(6)%></th>
+				<th><%=rs.getString(7)%></th>
+			</tr>
+			<%
+				}
+			%>
 		</table>
 	</div>
 	<div id="footer">

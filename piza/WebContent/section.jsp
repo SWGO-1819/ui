@@ -11,7 +11,7 @@
 </head>
 <body>
 <h2>매출전표등록</h2>
-<form action="" method="post" name="frm" onsubmit="checkFormData()">
+<form action="" method="post" name="frm">
 	<table>
 	<colgroup>
 		<col width="150px"/>
@@ -19,20 +19,20 @@
 	</colgroup>
 	<tr>
 		<th>매출전표번호</th>
-		<td><input name="salnum" type="text"  size='10' /></td>
+		<td><input name="salnum" id="salnum" type="text"  size='10' /></td>
 	</tr>
 	<tr>
 		<th>지점코드</th>
-		<td><input name="marketcode" type="text"  size='10' /></td>
+		<td><input name="marketcode" id="marketcode" type="text"  size='10' /></td>
 	</tr>
 	<tr>
 		<th>판매일자</th>
-		<td><input name="saldate" type="text"  size='12' /></td>
+		<td><input name="saldate"  id="saldate" type="text"  size='12' /></td>
 	</tr>
 	<tr>
 		<th>피자코드</th>
 		<td>
-		<select title="피자선택" name="pizza">
+		<select title="피자선택" id="pizza">
 			<option>[AA01]고르곤 졸라피자</option>
 			<option>[AA02]치즈피자</option>
 			<option>[AA03]페퍼로니피자</option>
