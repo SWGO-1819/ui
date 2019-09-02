@@ -1,0 +1,24 @@
+create table TBL_PIZZA_01(
+pcode char(4) not null primary key,
+pname varchar2(30),
+cost number(7)
+);
+create table TBL_SHOP_01(
+scode char(4) not null primary key,
+sname varchar2(20)
+);
+create table TBL_SALELIST_01( 
+saleno number(07) not null primary key,
+scode char(4) not null references TBL_SHOP_01(scode),
+saledate date,
+pcode char(4) not null references TBL_PIZZA_01(pcode ),
+amount number(5)
+);
+
+insert into TBL_SALELIST_01 values()
+
+create sequence test
+start with 100015
+increment by 1;
+
+rank () over (order by test)
